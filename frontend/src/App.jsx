@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage.jsx'
 import ChatPage from './pages/ChatPage.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
       <div>
