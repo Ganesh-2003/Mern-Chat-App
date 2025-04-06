@@ -7,7 +7,6 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -15,7 +14,6 @@ function App() {
         </Routes>
       
       </div>
-
   );
 }
 
