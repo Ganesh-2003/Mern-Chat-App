@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-
+import axios from "axios"
 const api_url = import.meta.env.VITE_API_URL
 
 
@@ -8,9 +8,11 @@ const ChatPage = () => {
     const [chats,setChats] = useState([]);
 
     const fetchChats = async () =>{
-        const response = await fetch(`${api_url}/api/chat`);
-        const data = await response.json();
-        console.log(data);
+        // const response = await fetch(`${api_url}/api/chat`);
+        // const data = await response.json();
+
+        const { data } = await axios.get(`${api_url}/api/chat`) 
+        console.log(typeof(data));
         setChats(data);
     }
 
